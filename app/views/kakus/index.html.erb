@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kakus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Url</th>
+      <th>Sonota</th>
+      <th>Users</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kakus.each do |kaku| %>
+      <tr>
+        <td><%= kaku.body %></td>
+        <td><%= kaku.url %></td>
+        <td><%= kaku.sonota %></td>
+        <td><%= kaku.users_id %></td>
+        <td><%= link_to 'Show', kaku %></td>
+        <td><%= link_to 'Edit', edit_kaku_path(kaku) %></td>
+        <td><%= link_to 'Destroy', kaku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kaku', new_kaku_path %>

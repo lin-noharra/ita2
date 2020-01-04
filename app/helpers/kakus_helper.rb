@@ -1,0 +1,2 @@
+module KakusHelper
+end
