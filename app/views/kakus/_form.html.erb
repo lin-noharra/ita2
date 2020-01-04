@@ -1,0 +1,37 @@
+<%= form_with(model: kaku, local: true) do |form| %>
+  <% if kaku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kaku.errors.count, "error") %> prohibited this kaku from being saved:</h2>
+
+      <ul>
+      <% kaku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :kaku_body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :kaku_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sonota %>
+    <%= form.text_field :sonota, id: :kaku_sonota %>
+  </div>
+
+  <div class="field">
+    <%= form.label :users_id %>
+    <%= form.number_field :users_id, id: :kaku_users_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
