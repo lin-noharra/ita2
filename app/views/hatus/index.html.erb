@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hatus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Url</th>
+      <th>Sonota</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hatus.each do |hatu| %>
+      <tr>
+        <td><%= hatu.body %></td>
+        <td><%= hatu.url %></td>
+        <td><%= hatu.sonota %></td>
+        <td><%= hatu.user_id %></td>
+        <td><%= link_to 'Show', hatu %></td>
+        <td><%= link_to 'Edit', edit_hatu_path(hatu) %></td>
+        <td><%= link_to 'Destroy', hatu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hatu', new_hatu_path %>

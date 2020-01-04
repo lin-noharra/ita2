@@ -1,0 +1,37 @@
+<%= form_with(model: hatu, local: true) do |form| %>
+  <% if hatu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hatu.errors.count, "error") %> prohibited this hatu from being saved:</h2>
+
+      <ul>
+      <% hatu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :hatu_body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :hatu_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sonota %>
+    <%= form.text_field :sonota, id: :hatu_sonota %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :hatu_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
