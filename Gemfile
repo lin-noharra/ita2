@@ -11,12 +11,15 @@ gem 'jbuilder',     '2.7.0'
 
   gem 'pg', '0.20.0'
   gem 'byebug',  '9.0.6', platform: :mri
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 
 group :development do
   gem 'web-console',           '3.5.1'
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
+gem 'fog', '1.42'
 end
 
 group :test do
