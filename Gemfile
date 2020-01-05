@@ -12,7 +12,7 @@ gem 'jbuilder',     '2.7.0'
   gem 'pg', '0.20.0'
   gem 'byebug',  '9.0.6', platform: :mri
 gem 'carrierwave',             '1.2.2'
-gem 'mini_magick',             '4.7.0'
+gem 'mini_magick',             '4.9.4'
 
 group :development do
   gem 'web-console',           '3.5.1'
