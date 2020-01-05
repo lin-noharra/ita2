@@ -16,7 +16,7 @@
   <tbody>
     <% @hatus.each do |hatu| %>
       <tr>
-        <td><%= hatu.body %></td>
+        <td><%= simple_format(hatu.body) %></td>
         <td><%= hatu.url %></td>
         <td><%= hatu.sonota %></td>
         <td><%= hatu.user_id %></td>
